@@ -11,6 +11,9 @@
 		ED0210CC2A21015C00E431C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0210CB2A21015C00E431C9 /* ContentView.swift */; };
 		ED0210CE2A21015E00E431C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0210CD2A21015E00E431C9 /* Assets.xcassets */; };
 		ED0210D12A21015E00E431C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0210D02A21015E00E431C9 /* Preview Assets.xcassets */; };
+		ED0210D92A2101C800E431C9 /* timeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0210D82A2101C800E431C9 /* timeManager.swift */; };
+		ED0210DB2A2103A500E431C9 /* timeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0210DA2A2103A500E431C9 /* timeData.swift */; };
+		ED1E07722A22511D0037F84B /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E07712A22511D0037F84B /* TimeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		ED0210CB2A21015C00E431C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED0210CD2A21015E00E431C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED0210D02A21015E00E431C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED0210D82A2101C800E431C9 /* timeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManager.swift; sourceTree = "<group>"; };
+		ED0210DA2A2103A500E431C9 /* timeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeData.swift; sourceTree = "<group>"; };
+		ED1E07712A22511D0037F84B /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
+		ED61C8B62A2388CE00490E2D /* Azaan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Azaan.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,8 @@
 		ED0210C82A21015C00E431C9 /* Azaan */ = {
 			isa = PBXGroup;
 			children = (
+				ED61C8B62A2388CE00490E2D /* Azaan.entitlements */,
+				ED0210D72A21018E00E431C9 /* Model */,
 				ED0210C92A21015C00E431C9 /* AzaanApp.swift */,
 				ED0210CB2A21015C00E431C9 /* ContentView.swift */,
 				ED0210CD2A21015E00E431C9 /* Assets.xcassets */,
@@ -65,6 +74,16 @@
 				ED0210D02A21015E00E431C9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED0210D72A21018E00E431C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED0210D82A2101C800E431C9 /* timeManager.swift */,
+				ED0210DA2A2103A500E431C9 /* timeData.swift */,
+				ED1E07712A22511D0037F84B /* TimeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0210D92A2101C800E431C9 /* timeManager.swift in Sources */,
 				ED0210CC2A21015C00E431C9 /* ContentView.swift in Sources */,
+				ED0210DB2A2103A500E431C9 /* timeData.swift in Sources */,
 				ED0210CA2A21015C00E431C9 /* AzaanApp.swift in Sources */,
+				ED1E07722A22511D0037F84B /* TimeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +286,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Azaan/Azaan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Azaan/Preview Content\"";
+				DEVELOPMENT_TEAM = 32HTB659M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -281,6 +305,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nihal.Azaan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,9 +319,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Azaan/Azaan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Azaan/Preview Content\"";
+				DEVELOPMENT_TEAM = 32HTB659M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,6 +338,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nihal.Azaan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
